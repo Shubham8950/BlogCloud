@@ -281,7 +281,6 @@ E:\BlogCloud\code2night\bin\Debug\netcoreapp2.1\Code2Night.dll
 E:\BlogCloud\code2night\bin\Debug\netcoreapp2.1\Code2Night.pdb
 E:\BlogCloud\code2night\bin\Debug\netcoreapp2.1\Code2Night.Views.dll
 E:\BlogCloud\code2night\bin\Debug\netcoreapp2.1\Code2Night.Views.pdb
-E:\BlogCloud\code2night\obj\Debug\netcoreapp2.1\Code2Night.csprojAssemblyReference.cache
 E:\BlogCloud\code2night\obj\Debug\netcoreapp2.1\Code2Night.AssemblyInfoInputs.cache
 E:\BlogCloud\code2night\obj\Debug\netcoreapp2.1\Code2Night.AssemblyInfo.cs
 E:\BlogCloud\code2night\obj\Debug\netcoreapp2.1\Code2Night.csproj.CoreCompileInputs.cache
