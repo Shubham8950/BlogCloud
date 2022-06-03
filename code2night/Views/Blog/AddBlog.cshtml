@@ -3,10 +3,10 @@
     ViewBag.Title = "Add Blog | Code2Night.com";
     ViewBag.MetaDescription = "Welcome To Code2night, write your own blog and reach to the whole world.";
     ViewBag.MetaKeywords = "Add Blog,Code2Night,New Blogs,Code,Programming,Tutorials";
-    ViewBag.Canonical = "https://www.code2night.com/Blog/AddBlog";
+    ViewBag.Canonical = "https://www.blogcloud.code2night.com/Blog/AddBlog";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
-    ViewBag.OpenGraphUrl = "https://www.code2night.com/Blog/AddBlog";
+    ViewBag.OpenGraphUrl = "https://www.blogcloud.code2night.com/Blog/AddBlog";
     ViewBag.OpenGraphDescription = "Welcome To Code2night, check out latest programming blogs with detailed description to help you out";
     ViewBag.OpenGraphTitle = "Add Blog | Code2Night.com";
 }
@@ -21,8 +21,8 @@
 
             .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
                 color: #0066ff !important;
-                background-color: #cd3c2e;
-                border-color: #cd3c2e;
+                background-color: #17a2b8;
+                border-color: #17a2b8;
             }
 
         .note-toolbar {
@@ -80,92 +80,92 @@
             <!-- ================ -->
             @if (Model.Id > 0)
             {
-                <div class="main col-md-6" style="word-break:break-all">
+            <div class="main col-md-6" style="word-break:break-all">
 
-                    <!-- page-title start -->
-                    <!-- ================ -->
+                <!-- page-title start -->
+                <!-- ================ -->
 
-                    <h1 class="page-title" id="Title">@Model.Title</h1>
-                    <!-- page-title end -->
-                    <!-- blogpost start -->
-                    <article class="clearfix blogpost full">
-                        <div class="blogpost-body">
-                            <div class="side">
-                                <div class="post-info">
-                                    <span class="day">@Model.Date.Day</span>
-                                    <span class="month">@Model.Date.ToString("MMM") @Model.Date.Year</span>
-                                </div>
-                                <div id="affix"><span class="share">Share This</span><div id="share"></div></div>
+                <h1 class="page-title" id="Title">@Model.Title</h1>
+                <!-- page-title end -->
+                <!-- blogpost start -->
+                <article class="clearfix blogpost full">
+                    <div class="blogpost-body">
+                        <div class="side">
+                            <div class="post-info">
+                                <span class="day">@Model.Date.Day</span>
+                                <span class="month">@Model.Date.ToString("MMM") @Model.Date.Year</span>
                             </div>
-                            <div class="blogpost-content">
-                                <header>
-                                    <div class="submitted"><i class="fa fa-user pr-5"></i> by <a href="#">@(string.IsNullOrEmpty(Convert.ToString(HttpContextAccessor.HttpContext.Session.GetString("UserName"))) ? "Author" : (Convert.ToString(HttpContextAccessor.HttpContext.Session.GetString("UserName"))))</a></div>
-                                </header>
-                                <blockquote>
-                                    <p id="previewIntroduction">@Model.BlogIntroduction</p>
-                                </blockquote>
-
-                                <div id="blogbody">
-                                    <p id="blog">@Html.Raw(Model.BlogBody)</p>
-                                </div>
-                            </div>
-                            <footer class="clearfix">
-                                <ul class="links pull-left">
-
-                                    <li><i class="fa fa-tags pr-5"></i> <a href="#" id="mytags" class="text-capitalize"></a><a href="#" id="demotags" class="text-capitalize">@(Model.Tags!=null?Model.Tags.Replace("-"," "):"")</a></li>
-                                </ul>
-                            </footer>
+                            <div id="affix"><span class="share">Share This</span><div id="share"></div></div>
                         </div>
-                    </article>
-                </div>
+                        <div class="blogpost-content">
+                            <header>
+                                <div class="submitted"><i class="fa fa-user pr-5"></i> by <a href="#">@(string.IsNullOrEmpty(Convert.ToString(HttpContextAccessor.HttpContext.Session.GetString("UserName"))) ? "Author" : (Convert.ToString(HttpContextAccessor.HttpContext.Session.GetString("UserName"))))</a></div>
+                            </header>
+                            <blockquote>
+                                <p id="previewIntroduction">@Model.BlogIntroduction</p>
+                            </blockquote>
+
+                            <div id="blogbody">
+                                <p id="blog">@Html.Raw(Model.BlogBody)</p>
+                            </div>
+                        </div>
+                        <footer class="clearfix">
+                            <ul class="links pull-left">
+
+                                <li><i class="fa fa-tags pr-5"></i> <a href="#" id="mytags" class="text-capitalize"></a><a href="#" id="demotags" class="text-capitalize">@(Model.Tags!=null?Model.Tags.Replace("-"," "):"")</a></li>
+                            </ul>
+                        </footer>
+                    </div>
+                </article>
+            </div>
             }
             else
             {
-                <div class="main col-md-6" style="word-break:break-all">
+            <div class="main col-md-6" style="word-break:break-all">
 
-                    <!-- page-title start -->
-                    <!-- ================ -->
+                <!-- page-title start -->
+                <!-- ================ -->
 
-                    <h1 class="page-title" id="Title">Blogpost Title (Dummy Blog)</h1>
-                    <!-- page-title end -->
-                    <!-- blogpost start -->
-                    <article class="clearfix blogpost full">
-                        <div class="blogpost-body">
-                            <div class="side">
-                                <div class="post-info">
-                                    <span class="day">@DateTime.Now.Day</span>
-                                    <span class="month">@DateTime.Now.ToString("MMM") @DateTime.Now.Year</span>
-                                </div>
-                                <div id="affix"><span class="share">Share This</span><div id="share"></div></div>
+                <h1 class="page-title" id="Title">Blogpost Title (Dummy Blog)</h1>
+                <!-- page-title end -->
+                <!-- blogpost start -->
+                <article class="clearfix blogpost full">
+                    <div class="blogpost-body">
+                        <div class="side">
+                            <div class="post-info">
+                                <span class="day">@DateTime.Now.Day</span>
+                                <span class="month">@DateTime.Now.ToString("MMM") @DateTime.Now.Year</span>
                             </div>
-                            <div class="blogpost-content">
-                                <header>
-                                    <div class="submitted"><i class="fa fa-user pr-5"></i> by <a href="#">@(string.IsNullOrEmpty((Convert.ToString(HttpContextAccessor.HttpContext.Session.GetString("UserName")))) ? "Author" : (Convert.ToString(HttpContextAccessor.HttpContext.Session.GetString("UserName"))))</a></div>
-                                </header>
-                                <blockquote>
-                                    <p id="previewIntroduction">Please Enter a suitable description for your blog . It must be max 500 characters and must define what is your blog for..</p>
-                                </blockquote>
-                                <div id="demoblog">
-
-                                    <p>
-                                        The journal (the truncation of the language `` weblog '') is a speech or informational site printed on the Web consisting of separate, often intimate diary-style book entries (posts ) . Posts are typically exhibited in reverse chronological order, so that the most new place seems Firstly, in the top of the page. Until 2009, blogs were normally the study of a single person, occasionally of a small group, and frequently covered a single person or issue. At this 2010s, `` multi-author blogs '' (MABs) have produced, with posts published by huge amounts of writers and sometimes professionally edited. MABs from newspapers, different media outlets, universities, think tanks, support groups, and related institutions responsible for the increasing amount of blog communication.
-                                    </p><p>
-                                        This growth of Twitter and other `` microblogging '' organizations helps incorporate MABs and single-author blogs into this broadcast media. Journal can also be used as a verb, meaning to keep or bring knowledge to the blog.
-                                    </p>
-                                </div>
-                                <div id="blogbody" style="display:none">
-                                    <p id="blog"></p>
-                                </div>
-                            </div>
-                            <footer class="clearfix">
-                                <ul class="links pull-left">
-                                    <li><i class="fa fa-comment-o pr-5"></i> <a href="#">22 comments</a> |</li>
-                                    <li><i class="fa fa-tags pr-5"></i> <a href="#" id="mytags" class="text-capitalize"></a><a href="#" id="demotags" class="text-capitalize">tags1, tag2</a></li>
-                                </ul>
-                            </footer>
+                            <div id="affix"><span class="share">Share This</span><div id="share"></div></div>
                         </div>
-                    </article>
-                </div>
+                        <div class="blogpost-content">
+                            <header>
+                                <div class="submitted"><i class="fa fa-user pr-5"></i> by <a href="#">@(string.IsNullOrEmpty((Convert.ToString(HttpContextAccessor.HttpContext.Session.GetString("UserName")))) ? "Author" : (Convert.ToString(HttpContextAccessor.HttpContext.Session.GetString("UserName"))))</a></div>
+                            </header>
+                            <blockquote>
+                                <p id="previewIntroduction">Please Enter a suitable description for your blog . It must be max 500 characters and must define what is your blog for..</p>
+                            </blockquote>
+                            <div id="demoblog">
+
+                                <p>
+                                    The journal (the truncation of the language `` weblog '') is a speech or informational site printed on the Web consisting of separate, often intimate diary-style book entries (posts ) . Posts are typically exhibited in reverse chronological order, so that the most new place seems Firstly, in the top of the page. Until 2009, blogs were normally the study of a single person, occasionally of a small group, and frequently covered a single person or issue. At this 2010s, `` multi-author blogs '' (MABs) have produced, with posts published by huge amounts of writers and sometimes professionally edited. MABs from newspapers, different media outlets, universities, think tanks, support groups, and related institutions responsible for the increasing amount of blog communication.
+                                </p><p>
+                                    This growth of Twitter and other `` microblogging '' organizations helps incorporate MABs and single-author blogs into this broadcast media. Journal can also be used as a verb, meaning to keep or bring knowledge to the blog.
+                                </p>
+                            </div>
+                            <div id="blogbody" style="display:none">
+                                <p id="blog"></p>
+                            </div>
+                        </div>
+                        <footer class="clearfix">
+                            <ul class="links pull-left">
+                                <li><i class="fa fa-comment-o pr-5"></i> <a href="#">22 comments</a> |</li>
+                                <li><i class="fa fa-tags pr-5"></i> <a href="#" id="mytags" class="text-capitalize"></a><a href="#" id="demotags" class="text-capitalize">tags1, tag2</a></li>
+                            </ul>
+                        </footer>
+                    </div>
+                </article>
+            </div>
             }
             <!-- main end -->
             <!-- sidebar start -->
@@ -243,6 +243,12 @@
     <script type='text/javascript' src='/plugins/sweetalert2/sweetalert2.min.js'></script>
     <script type='text/javascript' src='/Tags/bootstrap-tokenfield.min.js'></script>
     <script>
+
+        $.getJSON("https://api.ipify.org?format=json", function (data) {
+                // Setting text of element P with id gfg
+                $("#gfg").html(data.ip);
+            })
+
     var Validate = function () {
         if ($('#title').val() == "") {
             alert("Title cannot be blank !");

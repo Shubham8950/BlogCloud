@@ -4,9 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.MetaDescription = "Welcome To Code2night, check out latest programming blogs with detailed description to help you out";
     ViewBag.MetaKeywords = "Code2Night,Code,Programming,Tutorials," + (!string.IsNullOrEmpty(Model.Tag)?Model.Tag:Model.Author);
-    ViewBag.Canonical = "https://www.code2night.com/Blog/"+ (!string.IsNullOrEmpty(Model.Tag) ? "Tags" : "Author") + "/"+ (!string.IsNullOrEmpty(Model.Tag) ? Model.Tag : Model.Author);
+    ViewBag.Canonical = "https://www.blogcloud.code2night.com/Blog/"+ (!string.IsNullOrEmpty(Model.Tag) ? "Tags" : "Author") + "/"+ (!string.IsNullOrEmpty(Model.Tag) ? Model.Tag : Model.Author);
 
-    ViewBag.OpenGraphUrl = "https://www.code2night.com/Blog/" + (!string.IsNullOrEmpty(Model.Tag) ? "Tags" : "Author") + "/" + (!string.IsNullOrEmpty(Model.Tag) ? Model.Tag : Model.Author);
+    ViewBag.OpenGraphUrl = "https://www.blogcloud.code2night.com/Blog/" + (!string.IsNullOrEmpty(Model.Tag) ? "Tags" : "Author") + "/" + (!string.IsNullOrEmpty(Model.Tag) ? Model.Tag : Model.Author);
     ViewBag.OpenGraphDescription = "Welcome To Code2night, check out latest programming blogs with detailed description to help you out";
     ViewBag.OpenGraphTitle = (!string.IsNullOrEmpty(Model.Tag) ? Model.Tag : Model.Author) + " Blogs | Code2Night.com";
 }
@@ -36,11 +36,11 @@
 
                 @if (!string.IsNullOrEmpty(Model.Tag))
                 {
-                <h1 class="page-title">Blog results for Tags - <span style="background-color:#e84c3d;padding:4px;color: white;font-size: 18px;">#@Model.Tag.Replace("-"," ") </span> </h1>
+                <h1 class="page-title">Blog results for Tags - <span style="background-color:#17a2b8;padding:4px;color: white;font-size: 18px;">#@Model.Tag.Replace("-"," ") </span> </h1>
                 }
                 else
                 {
-                <h1 class="page-title">Blog results for Author - <span style="background-color:#e84c3d;padding:4px;color: white;font-size: 18px;">#@Model.Author </span> </h1>
+                <h1 class="page-title">Blog results for Author - <span style="background-color:#17a2b8;padding:4px;color: white;font-size: 18px;">#@Model.Author </span> </h1>
                     }
                 <div class="separator-2"></div>
 

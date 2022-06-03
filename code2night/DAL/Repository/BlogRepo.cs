@@ -96,7 +96,7 @@ namespace Code2Night.DAL.Repository
             adp.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
             adp.SelectCommand.Parameters.AddWithValue("@Activity", blog.Id > 0 ? "Edit" : "Add");
             adp.SelectCommand.Parameters.AddWithValue("@BlogUrl", blog.BlogUrl);
-            adp.SelectCommand.Parameters.AddWithValue("@UserID", blog.User.Id);
+            adp.SelectCommand.Parameters.AddWithValue("@UserID", 0);
             adp.SelectCommand.Parameters.AddWithValue("@BlogMonth", blog.BlogMonth);
             adp.SelectCommand.Parameters.AddWithValue("@BlogBody", blog.BlogBody);
             adp.SelectCommand.Parameters.AddWithValue("@Title", blog.Title);
@@ -108,6 +108,8 @@ namespace Code2Night.DAL.Repository
             adp.SelectCommand.Parameters.AddWithValue("@IsPrivate", blog.IsPrivate);
             adp.SelectCommand.Parameters.AddWithValue("@BlogEncodedUrl", blog.BlogEncodedUrl);
             adp.SelectCommand.Parameters.AddWithValue("@Id", blog.Id);
+            adp.SelectCommand.Parameters.AddWithValue("@AllIpAddresses", blog.AllIpAddresses);
+            adp.SelectCommand.Parameters.AddWithValue("@IsApproved", blog.IsApproved);
             DataTable dt = new DataTable();
             adp.Fill(dt);
             adp.SelectCommand.Connection.Close();

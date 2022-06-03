@@ -167,10 +167,10 @@ namespace Code2Night.DAL.Repository
 
         public void SendVerificationLinkEmail(string emailID, Guid activationCode)
         {
-            var verifyUrl = "https://www.code2night.com/Users/VerifyAccount/" + activationCode;
+            var verifyUrl = "https://www.blogcloud.code2night.com/Users/VerifyAccount/" + activationCode;
             var link = verifyUrl;
 
-            var fromEmail = new MailAddress("info@code2night.com", "Code2night");
+            var fromEmail = new MailAddress("info@code2night.com", "BlogCloud");
             var toEmail = new MailAddress(emailID);
             var fromEmailPassword = "87Lkce~2"; // Replace with actual password
             string subject = "Your account is successfully created!";

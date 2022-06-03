@@ -15,8 +15,8 @@
     ViewBag.Title = Model.MyBlog.Title + " | Code2night.com";
     ViewBag.MetaDescription = Model.MyBlog.BlogIntroduction;
     ViewBag.MetaKeywords = "Code2Night,Code,Programming,Tutorials," + string.Join(",", List);
-    ViewBag.Canonical = "https://www.code2night.com/Blog/MyBlog?id=" + System.Web.HttpUtility.UrlEncode(Model.MyBlog.BlogUrl);
-    ViewBag.OpenGraphUrl = "https://www.code2night.com/Blog/MyBlog?id=" + System.Web.HttpUtility.UrlEncode(Model.MyBlog.BlogUrl);
+    ViewBag.Canonical = "https://www.blogcloud.code2night.com/Blog/MyBlog?id=" + System.Web.HttpUtility.UrlEncode(Model.MyBlog.BlogUrl);
+    ViewBag.OpenGraphUrl = "https://www.blogcloud.code2night.com/Blog/MyBlog?id=" + System.Web.HttpUtility.UrlEncode(Model.MyBlog.BlogUrl);
     ViewBag.OpenGraphDescription = Model.MyBlog.BlogIntroduction;
     ViewBag.OpenGraphTitle = Model.MyBlog.Title;
 }
@@ -76,7 +76,7 @@
     "@@type" : "Article",
     "name" : "@Model.MyBlog.Title",
     "headline" : "@Model.MyBlog.Title",
-    "url" : "https://www.code2night.com/Blog/MyBlog/@System.Web.HttpUtility.UrlEncode(Model.MyBlog.BlogUrl)",
+    "url" : "https://www.blogcloud.code2night.com/Blog/MyBlog/@System.Web.HttpUtility.UrlEncode(Model.MyBlog.BlogUrl)",
     "author" : {
     "@@type" : "Person",
     "name" : "@Model.MyBlog.AuthorName"
@@ -86,7 +86,7 @@
     "articleBody" : "@Model.MyBlog.BlogIntroduction",
     "publisher" : {
     "@@type" : "Organization",
-    "name" : "Code2night"
+    "name" : "BlogCloud"
     }
     }
     </script>

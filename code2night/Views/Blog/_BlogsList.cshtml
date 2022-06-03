@@ -8,7 +8,7 @@
     "@@type" : "Article",
     "name" : "@item.Title",
     "headline" : "@item.Title",
-    "url" : "https://www.code2night.com/Blog/MyBlog?id=@(System.Web.HttpUtility.UrlEncode(item.BlogUrl))",
+    "url" : "https://www.blogcloud.code2night.com/Blog/MyBlog?id=@(System.Web.HttpUtility.UrlEncode(item.BlogUrl))",
     "author" : {
     "@@type" : "Person",
     "name" : "@item.AuthorName"
@@ -18,7 +18,7 @@
     "articleBody" : "@item.BlogBody",
     "publisher" : {
     "@@type" : "Organization",
-    "name" : "Code2night"
+    "name" : "BlogCloud"
     }
      }
     </script>

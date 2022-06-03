@@ -4,9 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.MetaDescription = "Welcome To Code2night, check out latest programming blogs with detailed description to help you out";
     ViewBag.MetaKeywords = "Code2Night,Code,Programming,Tutorials," + (!string.IsNullOrEmpty(Model.Tag)?Model.Tag:Model.Author);
-    ViewBag.Canonical = "https://www.code2night.com/Blog/"+ (!string.IsNullOrEmpty(Model.Tag) ? "Tags" : "Author") + "/"+ (!string.IsNullOrEmpty(Model.Tag) ? Model.Tag : Model.Author);
+    ViewBag.Canonical = "https://www.blogcloud.code2night.com/Blog/"+ (!string.IsNullOrEmpty(Model.Tag) ? "Tags" : "Author") + "/"+ (!string.IsNullOrEmpty(Model.Tag) ? Model.Tag : Model.Author);
 
-    ViewBag.OpenGraphUrl = "https://www.code2night.com/Blog/" + (!string.IsNullOrEmpty(Model.Tag) ? "Tags" : "Author") + "/" + (!string.IsNullOrEmpty(Model.Tag) ? Model.Tag : Model.Author);
+    ViewBag.OpenGraphUrl = "https://www.blogcloud.code2night.com/Blog/" + (!string.IsNullOrEmpty(Model.Tag) ? "Tags" : "Author") + "/" + (!string.IsNullOrEmpty(Model.Tag) ? Model.Tag : Model.Author);
     ViewBag.OpenGraphDescription = "Welcome To Code2night, check out latest programming blogs with detailed description to help you out";
     ViewBag.OpenGraphTitle = (!string.IsNullOrEmpty(Model.Tag) ? Model.Tag : Model.Author) + " Blogs | Code2Night.com";
     List<string> List = new List<string>();
@@ -64,7 +64,7 @@
                                 @foreach (var str in Model.AuthorDetail.Skills.Split(","))
                                 {
                                 <div class="tag" itemprop="keywords">
-                                    <a style="background-color: #e84c3d;color:white">@str</a>
+                                    <a style="background-color: #17a2b8;color:white">@str</a>
                                 </div>
                                 }
                             </div>

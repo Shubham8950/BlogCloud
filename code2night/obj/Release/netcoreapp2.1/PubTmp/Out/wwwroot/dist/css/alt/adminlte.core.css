@@ -14,7 +14,7 @@
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
-  --purple: #6f42c1;
+  --purple: #17a2b8;
   --pink: #e83e8c;
   --red: #dc3545;
   --orange: #fd7e14;
@@ -11668,13 +11668,13 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
 
 .sidebar-dark-purple .nav-sidebar > .nav-item > .nav-link.active,
 .sidebar-light-purple .nav-sidebar > .nav-item > .nav-link.active {
-  background-color: #6f42c1;
+  background-color: #17a2b8;
   color: #ffffff;
 }
 
 .sidebar-dark-purple .nav-sidebar.nav-legacy > .nav-item > .nav-link.active,
 .sidebar-light-purple .nav-sidebar.nav-legacy > .nav-item > .nav-link.active {
-  border-color: #6f42c1;
+  border-color: #17a2b8;
 }
 
 .sidebar-dark-pink .nav-sidebar > .nav-item > .nav-link.active,
@@ -13092,7 +13092,7 @@ body.text-sm .control-sidebar {
 }
 
 .navbar-purple {
-  background-color: #6f42c1;
+  background-color: #17a2b8;
 }
 
 .navbar-pink {
@@ -13778,7 +13778,7 @@ blockquote.quote-indigo h6 {
 }
 
 blockquote.quote-purple {
-  border-color: #6f42c1;
+  border-color: #17a2b8;
 }
 
 blockquote.quote-purple h1,
@@ -13787,7 +13787,7 @@ blockquote.quote-purple h3,
 blockquote.quote-purple h4,
 blockquote.quote-purple h5,
 blockquote.quote-purple h6 {
-  color: #6f42c1;
+  color: #17a2b8;
 }
 
 blockquote.quote-pink {
@@ -14036,7 +14036,7 @@ blockquote.quote-gray-dark h6 {
 }
 
 .text-purple {
-  color: #6f42c1 !important;
+  color: #17a2b8 !important;
 }
 
 .text-pink {
@@ -14424,7 +14424,7 @@ blockquote.quote-gray-dark h6 {
 }
 
 .bg-purple {
-  background-color: #6f42c1 !important;
+  background-color: #17a2b8 !important;
 }
 
 .bg-purple,
@@ -15164,7 +15164,7 @@ blockquote.quote-gray-dark h6 {
 }
 
 .bg-gradient-purple {
-  background: #6f42c1 linear-gradient(180deg, #855eca, #6f42c1) repeat-x !important;
+  background: #17a2b8 linear-gradient(180deg, #855eca, #17a2b8) repeat-x !important;
 }
 
 .bg-gradient-purple.btn.disabled, .bg-gradient-purple.btn:disabled, .bg-gradient-purple.btn:not(:disabled):not(.disabled):active, .bg-gradient-purple.btn:not(:disabled):not(.disabled).active,
@@ -16566,7 +16566,7 @@ a.text-muted:hover {
 
 .accent-purple .btn-link,
 .accent-purple a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link):not(.page-link):not(.btn) {
-  color: #6f42c1;
+  color: #17a2b8;
 }
 
 .accent-purple .btn-link:hover,
@@ -16575,12 +16575,12 @@ a.text-muted:hover {
 }
 
 .accent-purple .dropdown-item:active, .accent-purple .dropdown-item.active {
-  background: #6f42c1;
+  background: #17a2b8;
   color: #ffffff;
 }
 
 .accent-purple .custom-control-input:checked ~ .custom-control-label::before {
-  background: #6f42c1;
+  background: #17a2b8;
   border-color: #432776;
 }
 
@@ -16596,13 +16596,13 @@ a.text-muted:hover {
 }
 
 .accent-purple .page-item .page-link {
-  color: #6f42c1;
+  color: #17a2b8;
 }
 
 .accent-purple .page-item.active a,
 .accent-purple .page-item.active .page-link {
-  background-color: #6f42c1;
-  border-color: #6f42c1;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
   color: #ffffff;
 }
 

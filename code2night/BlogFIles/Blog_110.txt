@@ -30,4 +30,4 @@
         .slick-prev:before, .slick-next:before {
             color: red;
         }
-    &lt;/style&gt;</pre><p>So, this will make your arrows visible which you can use to toggle the slick slider slides. There are many more attributes you can use in slick slider for modifying the slider display. We will see them in our next blog. You can have a look at&nbsp;<a href="https://www.code2night.com/Blog/MyBlog/Slick-Slider" target="_blank">Slick-Slider</a>&nbsp;for more options.</p>
+    &lt;/style&gt;</pre><p>So, this will make your arrows visible which you can use to toggle the slick slider slides. There are many more attributes you can use in slick slider for modifying the slider display. We will see them in our next blog. You can have a look at&nbsp;<a href="https://www.blogcloud.code2night.com/Blog/MyBlog/Slick-Slider" target="_blank">Slick-Slider</a>&nbsp;for more options.</p>

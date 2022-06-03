@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:54093",
+      "applicationUrl": "http://localhost:54094",
       "sslPort": 0
     }
   },
@@ -16,7 +16,7 @@
       },
       "ancmHostingModel": "InProcess"
     },
-    "Code2Night": {
+    "BlogCloud": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

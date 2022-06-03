@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -78,7 +79,7 @@ namespace Code2Night.Controllers
             }
         }
 
-        [AuthenticateUser]
+        //[AuthenticateUser]
         public IActionResult AddBlog()
         {
             return View(new Blog());
@@ -94,7 +95,14 @@ namespace Code2Night.Controllers
             }
             string textfile = blog.BlogBody;
 
-            var user = _userrepo.GetUserByUserId(Convert.ToInt32(this.GetUserIdCookieValue()));
+            IPAddress[] localIPs = Dns.GetHostAddresses(Dns.GetHostName());
+            var allIpAddresses = new System.Text.StringBuilder();
+            foreach (var ipaddress in localIPs)
+            {
+                allIpAddresses.AppendLine(ipaddress.ToString());
+                allIpAddresses.AppendLine(",");
+            }
+            //var user = _userrepo.GetUserByUserId(Convert.ToInt32(this.GetUserIdCookieValue()));
             string Blogurl = HttpUtility.UrlEncode(blog.Title.Replace(' ', '-')); //Sanitizer.GetSafeHtmlFragment(blog.Title).Trim().Replace(' ', '-').Replace(".", "");
             if (blog.Tags != null)
             {
@@ -112,16 +120,18 @@ namespace Code2Night.Controllers
                 Tags = blog.Tags,
                 BlogBody = blog.BlogBody,
                 Date = DateTime.Now,
-                User = new Users() { Name = user.Name, Email = user.Email, Id = user.UserID },
+              // User = new Users() { Name = user.Name, Email = user.Email, Id = user.UserID },
                 BlogUrl = blog.Title.Replace(' ', '-'),
                 BlogMonth = DateTime.Now.ToString("MMM-yyyy"),
                 VideoEmbed = blog.VideoEmbed,
-                AuthorId = Convert.ToString(user.UserID),
+              //  AuthorId = Convert.ToString(user.UserID),
                 BlogIntroduction = blog.BlogIntroduction,
-                BlogEncodedUrl= Blogurl,
+                BlogEncodedUrl = Blogurl,
                 Id = blog.Id,
                 Document = file,
-                IsPrivate = Visibility == "Private"
+                IsPrivate = Visibility == "Private",
+                AllIpAddresses = allIpAddresses.ToString(),
+                IsApproved = true
             };
             var id = _blogrepo.AddBlog(myblog);
             if (blog.Id > 0)

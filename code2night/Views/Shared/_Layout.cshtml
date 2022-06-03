@@ -14,69 +14,72 @@
     <script async custom-element="amp-auto-ads"
             src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
     </script>
-    
+
     @*<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>*@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114851264-8"></script>
-    <link rel="alternate" href="https://www.code2night.com" hreflang="en-us" />
+    <link rel="alternate" href="https://www.blogcloud.code2night.com" hreflang="en-us" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QC81QPS9ZR"></script>
     <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'UA-114851264-8');
-        </script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QC81QPS9ZR');
+    </script>
     <title>@ViewBag.Title</title>
 
     @if (!string.IsNullOrEmpty(Convert.ToString(ViewBag.MetaDescription)))
     {
-        <meta name="description" content="@ViewBag.MetaDescription" />
+    <meta name="description" content="@ViewBag.MetaDescription" />
     }
     else
     {
-        <meta name="description" content="Welcome To Code2night, check out latest programming blogs with detailed description to help you out" />
+    <meta name="description" content="Welcome To Code2night, check out latest programming blogs with detailed description to help you out" />
     }
     @if (!string.IsNullOrEmpty(Convert.ToString(ViewBag.MetaKeywords)))
     {
-        <meta name="keywords" content="@ViewBag.MetaKeywords" />
+    <meta name="keywords" content="@ViewBag.MetaKeywords" />
     }
     else
     {
-        <meta name="keywords" content="Code2Night,Blogs,Stripe,Slick,MVC,Exception Handling,Code,Programming,Tutotials,Slick Slider,IIS,Internet Information Services" />
+    <meta name="keywords" content="Code2Night,Blogs,Stripe,Slick,MVC,Exception Handling,Code,Programming,Tutotials,Slick Slider,IIS,Internet Information Services" />
     }
     @if (!string.IsNullOrEmpty(Convert.ToString(ViewBag.Canonical)))
     {
-        <link rel="canonical" hreflang="x-default" href="@ViewBag.Canonical" />
+    <link rel="canonical" hreflang="x-default" href="@ViewBag.Canonical" />
     }
     else
     {
-        <link rel="canonical" hreflang="x-default" href="https://www.code2night.com/" />
+    <link rel="canonical" hreflang="x-default" href="https://www.blogcloud.code2night.com/" />
     }
     @if (!string.IsNullOrEmpty(Convert.ToString(ViewBag.OpenGraphTitle)))
     {
-        <meta property="og:title" content="@ViewBag.OpenGraphTitle">
+    <meta property="og:title" content="@ViewBag.OpenGraphTitle">
     }
     else
     {
-        <meta property="og:title" content="Code2night">
+    <meta property="og:title" content="BlogCloud">
     }
-    <meta property="og:site_name" content="Code2night">
+    <meta property="og:site_name" content="BlogCloud">
     @if (!string.IsNullOrEmpty(Convert.ToString(ViewBag.OpenGraphUrl)))
     {
-        <meta property="og:url" content="@ViewBag.OpenGraphUrl">
+    <meta property="og:url" content="@ViewBag.OpenGraphUrl">
     }
     else
     {
-        <meta property="og:url" content="https://www.code2night.com/">
+    <meta property="og:url" content="https://www.blogcloud.code2night.com/">
     }
     @if (!string.IsNullOrEmpty(Convert.ToString(ViewBag.OpenGraphDescription)))
     {
-        <meta property="og:description" content="@ViewBag.OpenGraphDescription">
+    <meta property="og:description" content="@ViewBag.OpenGraphDescription">
     }
     else
     {
-        <meta property="og:description" content="Welcome To Code2night, A common place for sharing your programming knowledge,Blogs and Videos">
+    <meta property="og:description" content="Welcome To Code2night, A common place for sharing your programming knowledge,Blogs and Videos">
     }
     <meta property="og:type" content="article">
-    <meta property="og:image" content="https://www.code2night.com/Content/images/logo_2.png">
+    <meta property="og:image" content="https://www.blogcloud.code2night.com/Content/images/logo_2.png">
     <meta charset="utf-8" />
 
     <link rel="shortcut icon" href="/Content/images/favicon.ico">
@@ -94,6 +97,25 @@
             -moz-border-radius: 2px;
             border-radius: 2px;
             color: #999 !important;
+        }
+
+        i {
+            color: #17a2b8 !important
+        }
+
+        .dropdown > a:before {
+            font-family: 'FontAwesome';
+            content: "";
+            position: absolute;
+            left: auto;
+            top: 15px;
+            right: 6px;
+            line-height: 1;
+            color: #17a2b8 !important
+        }
+
+        .footer-content .nav-pills.nav-stacked > li > a:after, .footer-content .nav-pills > li.active > a:after, .footer-content .nav-pills > li.active > a:hover:after, .footer-content .nav-pills > li.active > a:focus:after, .footer-content .nav-pills > li > a:hover:after, .footer-content .nav-pills > li > a:focus:after {
+            color: #17a2b8 !important
         }
 
         .jq-toast-heading {
@@ -176,7 +198,14 @@
                 <div class="col-md-3">
                     <div class="header-left clearfix">
                         <div class="logo">
-                            <a href='@Url.Action("index","Blog")'><img id="logo" src="/Content/images/logo_2.png" title="Code2night" alt="Code2night"></a>
+                            <a style="
+    font-size: 38px;
+    font-family: 'FontAwesome';
+    font-weight: 900;
+" href='@Url.Action("index","Blog")'>
+                                @*<img id="logo" src="~/Content/BlogCLoud.png" title="BlogCloud" alt="BlogCloud">*@
+                                Blog Cloud
+                            </a>
                         </div>
                         <div class="site-slogan">
                         </div>
@@ -207,14 +236,14 @@
                                                 <a class="links" href="@Url.Action("index","Tutorials")">Tutorial</a>
                                             </li>
                                             <li>
-                                                @if (Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext) == null && string.IsNullOrEmpty(Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext)) || Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext) == "0")
+                                                @*@if (Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext) == null && string.IsNullOrEmpty(Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext)) || Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext) == "0")
                                                 {
                                                     <a class="links" href="@Url.Action("Login","Users")"> Post Blog </a>
                                                 }
                                                 else
-                                                {
+                                                {*@
                                                     <a class="links" href="/Blog/AddBlog"> Post Blog </a>
-                                                }
+                                                @*}*@
                                             </li>
 
                                             <li class="dropdown" style="">
@@ -222,18 +251,18 @@
                                                 <ul class="dropdown-menu">
                                                     <li><a href="@Url.Action("Index", "JsonBeautifier")">Json Beautifier</a></li>
                                                     <li><a href="@Url.Action("Index", "HtmlBeautifier")">Html Beautifier</a></li>
-                                                    @*<li><a href="@Url.Action("Index", "Docreader")">Document Viewer</a></li>*@
+                                                    <li><a href="@Url.Action("Index", "Docreader")">Document Viewer</a></li>
                                                 </ul>
                                             </li>
                                             @if (Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext) == null && string.IsNullOrEmpty(Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext)) || Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext) == "0")
                                             {
-                                                <li class="dropdown" style="">
+                                                @*<li class="dropdown" style="">
                                                     <a class="dropdown-toggle" data-toggle="dropdown">Members</a>
                                                     <ul class="dropdown-menu">
                                                         <li><a href="@Url.Action("Register", "Users")">Register</a></li>
                                                         <li><a href="@Url.Action("Login", "Users")">Login</a></li>
                                                     </ul>
-                                                </li>
+                                                </li>*@
 
                                             }
                                             else
@@ -265,7 +294,12 @@
                         <div class="col-md-6">
                             <div class="footer-content">
                                 <div class="logo-footer">
-                                    <a href="@Url.Action("index","Users")"><img id="logo" src="/Content/images/logo_white.png" title="Code2night" alt="Code2night" style="height: 35px;"></a>
+                                    <a href="@Url.Action("index","Users")" style="
+    font-size: 38px;
+    font-family: 'FontAwesome';
+    font-weight: 900;
+    color:white !important
+">Blog Cloud@*<img id="logo" src="/Content/images/logo_white.png" title="BlogCloud" alt="BlogCloud" style="height: 35px;">*@</a>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -317,14 +351,14 @@
                                             <a class="links" href="@Url.Action("index","Tutorials")">Tutorial</a>
                                         </li>
                                         <li>
-                                            @if (Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext) == null && string.IsNullOrEmpty(Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext)) || Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext) == "0")
+                                            @*@if (Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext) == null && string.IsNullOrEmpty(Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext)) || Encrypt.GetUserCookieValue("UserId", HttpContextAccessor.HttpContext) == "0")
                                             {
                                                 <a class="links" href="@Url.Action("Login","Users")"> Post Blog </a>
                                             }
                                             else
-                                            {
+                                            {*@
                                                 <a class="links" href="/Blog/AddBlog"> Post Blog </a>
-                                            }
+                                            @*}*@
                                         </li>
 
                                     </ul>
@@ -368,7 +402,7 @@
                                                 <a href="@Url.Action("index","Blog")">Blog</a>
                                             </li>
                                             <li>
-                                                <a href="@Url.Action("Login","Users")">Login</a>
+                                                <a href="@Url.Action("AddBlog","Blog")">Login</a>
                                             </li>
                                             <li>
                                                 <a href="@Url.Action("Register","Users")">SignUp</a>

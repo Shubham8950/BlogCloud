@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -26,18 +28,18 @@ namespace Code2Night.Controllers
             _blogrepo = blog;
         }
 
-        public  IActionResult Index()
+        public IActionResult Index()
         {
-            if(this.GetUserRoleCookieValue()== "Admin")
+            if (this.GetUserRoleCookieValue() == "Admin")
             {
                 ViewBag.IsAdmin = true;
             }
-            var GetBlogs =_blogrepo.GetBlogs();
+            var GetBlogs = _blogrepo.GetBlogs();
             return View(GetBlogs);
         }
 
         public IActionResult Login()
-        {
+        {      
             if (GetUserCookieValue("UserId") != null && !string.IsNullOrEmpty(GetUserCookieValue("UserId")) && GetUserCookieValue("UserId") != "0")
             {
                 if (GetUserCookieValue("Role") == "Admin")

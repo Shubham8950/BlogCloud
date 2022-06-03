@@ -842,13 +842,13 @@
 }
 
 .direct-chat-purple .right > .direct-chat-text {
-  background: #6f42c1;
-  border-color: #6f42c1;
+  background: #17a2b8;
+  border-color: #17a2b8;
   color: #ffffff;
 }
 
 .direct-chat-purple .right > .direct-chat-text::after, .direct-chat-purple .right > .direct-chat-text::before {
-  border-left-color: #6f42c1;
+  border-left-color: #17a2b8;
 }
 
 .direct-chat-pink .right > .direct-chat-text {

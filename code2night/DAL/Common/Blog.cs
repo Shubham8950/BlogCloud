@@ -27,6 +27,7 @@ namespace Code2Night.DAL.Common
         public int TotalRecords { get; set; }
         public bool IsPrivate { get; set; }
         public bool IsApproved { get; set; }
+        public string AllIpAddresses { get; set; }
 
     }
 
