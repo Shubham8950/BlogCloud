@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\blogCloudGit\\BlogCloud\\code2night\\Code2Night.csproj": {}
+    "F:\\Blogcloud\\BlogCloud\\code2night\\Code2Night.csproj": {}
   },
   "projects": {
-    "E:\\blogCloudGit\\BlogCloud\\code2night\\Code2Night.csproj": {
+    "F:\\Blogcloud\\BlogCloud\\code2night\\Code2Night.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\blogCloudGit\\BlogCloud\\code2night\\Code2Night.csproj",
+        "projectUniqueName": "F:\\Blogcloud\\BlogCloud\\code2night\\Code2Night.csproj",
         "projectName": "Code2Night",
-        "projectPath": "E:\\blogCloudGit\\BlogCloud\\code2night\\Code2Night.csproj",
-        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-        "outputPath": "E:\\blogCloudGit\\BlogCloud\\code2night\\obj\\",
+        "projectPath": "F:\\Blogcloud\\BlogCloud\\code2night\\Code2Night.csproj",
+        "packagesPath": "C:\\Users\\shubh\\.nuget\\packages\\",
+        "outputPath": "F:\\Blogcloud\\BlogCloud\\code2night\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shubh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -150,7 +151,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -162,7 +164,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }
